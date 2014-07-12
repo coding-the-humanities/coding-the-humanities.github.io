@@ -1,6 +1,6 @@
 (function(){
   'use strict';
 
-  var app = angular.module('cth', []);
+  angular.module('cth', []);
 
 })();
