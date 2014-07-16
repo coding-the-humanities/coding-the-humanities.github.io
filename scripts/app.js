@@ -6,9 +6,12 @@
   app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '',
         templateUrl: 'templates/postList.html',
         controller: 'PostCtrl as postList'
+      })
+      .state('home.id', {
+        url: '/:post_id',
       })
       .state('about', {
         url: '/pilot',
@@ -25,5 +28,4 @@
     var students = $firebase(ref);
     return students;
   }
-
 })();
