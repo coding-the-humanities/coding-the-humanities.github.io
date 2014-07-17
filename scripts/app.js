@@ -6,6 +6,8 @@
 
   app.config(function($stateProvider, $urlRouterProvider) {
 
+    $urlRouterProvider.when('', '/posts/index');
+
     $stateProvider
       .state('posts', {
         url: '/posts',
