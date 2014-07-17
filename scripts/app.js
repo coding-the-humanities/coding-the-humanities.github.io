@@ -16,10 +16,7 @@
         controller: 'PostCtrl as postList'
       })
       .state('posts.post', {
-        url: '/:post_id',
-        onEnter: function(){
-          console.log(this);
-        }
+        url: '/:post_id'
       })
       .state('about', {
         url: '/pilot',
@@ -53,12 +50,19 @@
       scope: {
         selected: '@'
       },
-      link: function(scope, iElement){
-        if(iElement.hasClass('active')){
-          setTimeout(function(){
-            var pos = iElement[0].getBoundingClientRect().top;
-            window.scroll(0, pos);
-          }, 100);
+      link: function(scope, element, attrs){
+        scrollToPost();
+
+        scope.$watch(scrollToPost);
+
+        function scrollToPost(){
+          var el = element.hasClass('active');
+          if(el){
+            setTimeout(function(){
+              var pos = element[0].getBoundingClientRect().top;
+              window.scroll(0, pos);
+            }, 300);
+          }
         }
       }
     };
