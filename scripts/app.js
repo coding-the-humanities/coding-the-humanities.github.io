@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  var app = angular.module('cth', ['ngSanitize', 'firebase', 'ui.router']);
+  var app = angular.module('cth', ['ngSanitize', 'ngAnimate', 'firebase', 'ui.router']);
 
 
   app.config(function($stateProvider, $urlRouterProvider) {
@@ -47,21 +47,17 @@
     return {
       restrict: 'EA',
       replace: false,
-      scope: {
-        selected: '@'
-      },
       link: function(scope, element, attrs){
-        scrollToPost();
-
         scope.$watch(scrollToPost);
 
         function scrollToPost(){
-          var el = element.hasClass('active');
-          if(el){
+          var isActive = element.hasClass('active');
+          if(isActive){
             setTimeout(function(){
               var pos = element[0].getBoundingClientRect().top;
-              window.scroll(0, pos);
+              element[0].scrollIntoView();
             }, 300);
+
           }
         }
       }

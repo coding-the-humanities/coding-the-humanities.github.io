@@ -1,9 +1,9 @@
 (function(){
   'use strict';
 
-  angular.module('cth').controller('PostCtrl', ['Post', '$scope', '$state', '$location', '$anchorScroll', PostCtrl]);
+  angular.module('cth').controller('PostCtrl', ['Post', '$scope', PostCtrl]);
 
-  function PostCtrl(Post, $scope, $state, $location, $anchorScroll){
+  function PostCtrl(Post){
 
     var vm = this;
 
@@ -22,5 +22,7 @@
     function dasherize(str){
       return str.replace(/\s+/g, '-').toLowerCase(); 
     }
+
+    return vm;
   }
 })();
