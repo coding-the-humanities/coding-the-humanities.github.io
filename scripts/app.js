@@ -1,17 +1,23 @@
 (function(){
   'use strict';
 
-  var app = angular.module('cth', ['firebase', 'ui.router']);
+  var app = angular.module('cth', ['ngSanitize', 'firebase', 'ui.router']);
+
 
   app.config(function($stateProvider, $urlRouterProvider) {
+
     $stateProvider
-      .state('home', {
-        url: '',
+      .state('posts', {
+        url: '/posts',
+        abstract: true,
         templateUrl: 'templates/postList.html',
         controller: 'PostCtrl as postList'
       })
-      .state('home.id', {
+      .state('posts.post', {
         url: '/:post_id',
+        onEnter: function(){
+          console.log(this);
+        }
       })
       .state('about', {
         url: '/pilot',
@@ -21,6 +27,7 @@
       });
   });
 
+
   app.factory('studentsData', ['$firebase', studentsData]);
 
   function studentsData($firebase){
@@ -28,4 +35,31 @@
     var students = $firebase(ref);
     return students;
   }
+
+  app.filter('markdown', function ($sce) {
+    var converter = new Showdown.converter();
+    return function (value) {
+      var html = converter.makeHtml(value || '');
+      return $sce.trustAsHtml(html);
+    };
+  });
+
+  app.directive('myScroll', function(){
+    return {
+      restrict: 'EA',
+      replace: false,
+      scope: {
+        selected: '@'
+      },
+      link: function(scope, iElement){
+        if(iElement.hasClass('active')){
+          setTimeout(function(){
+            var pos = iElement[0].getBoundingClientRect().top;
+            window.scroll(0, pos);
+          }, 100);
+        }
+      }
+    };
+  });
+
 })();
