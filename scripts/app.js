@@ -54,8 +54,9 @@
           var isActive = element.hasClass('active');
           if(isActive){
             setTimeout(function(){
-              var pos = element[0].getBoundingClientRect().top;
-              element[0].scrollIntoView();
+              // var pos = element[0].getBoundingClientRect().top;
+              // element[0].scrollIntoView();
+              $(element[0]).scrollIntoView();
             }, 300);
 
           }
@@ -63,5 +64,4 @@
       }
     };
   });
-
 })();
