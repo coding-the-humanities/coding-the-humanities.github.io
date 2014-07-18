@@ -12,16 +12,15 @@
       vm.posts = postsWithId;
     });
 
-    vm.togglePost = function(post){
-      console.log(post);
-    };
-
     $scope.$on('itemSelected', function(){
-      deSelectPost();
       selectPost();
     });
 
-    function deSelectPost(){
+    $scope.toggleSelected = function(post){
+      post.selected = !post.selected;
+    };
+
+    function deSelectPosts(){
       _.each(vm.posts, function(post){
         post.selected = false;
       });
