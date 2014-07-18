@@ -10,11 +10,7 @@
       link: function(scope, element, attrs){
         var isActive;
         var done = true;
-        var top;
 
-        $timeout(function(){
-          top = $(element[0]).position().top + 20;
-        }, 100);
 
         $timeout(function(){
           selectItem();
@@ -31,6 +27,7 @@
 
         function scrollToPost(){
           isActive = element.hasClass('active');
+          var top = $(element[0]).position().top + 20;
 
           if(isActive && done){
             done = false;
