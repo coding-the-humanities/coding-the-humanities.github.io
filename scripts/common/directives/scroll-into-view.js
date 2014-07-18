@@ -27,7 +27,7 @@
 
         function scrollToPost(){
           isActive = element.hasClass('active');
-          var top = $(element[0]).position().top + 20;
+          var top = $(element[0]).position().top;
 
           if(isActive && done){
             done = false;
