@@ -1555,7 +1555,7 @@ div.highlight > pre > code .il, code .highlight .il {
           color: #E5CF39;
           background-color: #404040; } }
     .featured-spotlight .image svg {
-      display: block;
+      display: none;
       opacity: 1;
       position: absolute;
       fill: #E5CF39;
@@ -1564,17 +1564,14 @@ div.highlight > pre > code .il, code .highlight .il {
       width: 100vw;
       height: 100%;
       z-index: 9999; }
-  .featured-spotlight.selected img {
+  .featured-spotlight:hover svg, .featured-spotlight.expanded svg {
+    display: block; }
+  .featured-spotlight:hover img, .featured-spotlight.expanded img {
     width: 100vw;
     height: auto; }
-  .featured-spotlight.selected img {
-    -webkit-filter: grayscale(15%);
-            filter: grayscale(15%); }
   .featured-spotlight .post {
     display: block;
     clear: both;
-    background-color: #eeeeee;
-    margin-bottom: 20px;
     padding: 40px; }
     .featured-spotlight .post h2 + p, .featured-spotlight .post h3 + p, .featured-spotlight .post p:first-of-type, .featured-spotlight .post ul {
       padding-top: 0; }

@@ -8,7 +8,8 @@
     var vm = this;
 
     Post.getAll().then(function(posts){
-      var postsWithId = createPostIds(posts);
+      var postsWithImageProps = createImageProps(posts);
+      var postsWithId = createPostIds(postsWithImageProps);
       vm.posts = postsWithId;
     });
 
@@ -42,6 +43,13 @@
     function createPostIds(posts){
       return posts.map(function(post){
         post.id = dasherize(post.title);
+        return post;
+      }); 
+    }
+
+    function createImageProps(posts){
+      return posts.map(function(post){
+        post.headerImage = post.images[0];
         return post;
       }); 
     }
