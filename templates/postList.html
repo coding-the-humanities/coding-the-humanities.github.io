@@ -4,12 +4,12 @@
       <img ng-src="{{post.topImage.url}}">
       <h1 class="medium">{{post.title}}</h1>
     </a>
-    <a ng-show="post.selected" ng-click="toggleSelected(post)">
+    <a ng-show="post.selected" ng-click="toggleExpanded(post)">
       <img ng-src="{{post.topImage.url}}">
       <h1 class="medium">{{post.title}}</h1>
     </a>
   </div>
-  <article ng-show="post.selected" class="post g-medium--full g-wide--full cssSlideUp"}}>
+  <article ng-show="post.expanded" class="post g-medium--full g-wide--full cssSlideUp"}}>
     <div ng-bind-html="post.content | markdown"></div>
     <div class="meta">
       <ul class="list-links list-links--secondary">

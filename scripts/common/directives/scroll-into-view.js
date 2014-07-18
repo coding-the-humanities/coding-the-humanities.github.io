@@ -21,7 +21,7 @@
           isActive = element.hasClass('active');
           if(isActive && done){
             $rootScope.$broadcast('itemSelected');
-            $timeout(scrollToPost, 250);
+            scrollToPost();
           }
         }
 
