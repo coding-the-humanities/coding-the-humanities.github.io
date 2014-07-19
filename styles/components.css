@@ -581,7 +581,7 @@ pre {
     .post header h1 {
       font-family: NittyBold;
       position: absolute;
-      top: 70%;
+      bottom: 20px;
       width: 100%;
       text-align: left;
       padding: 15px 40px;
