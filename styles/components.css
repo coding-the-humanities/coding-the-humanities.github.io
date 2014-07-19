@@ -581,12 +581,14 @@ pre {
     .post header h1 {
       font-family: NittyBold;
       position: absolute;
-      top: 0;
+      top: 75%;
+      width: 100%;
+      text-align: center;
       padding: 15px 40px;
       text-align: center;
+      color: white;
       background-color: black;
-      color: #E5CF39;
-      opacity: 0.5; }
+      opacity: 0.2; }
     .post header img {
       width: 100vw;
       height: auto;
@@ -600,11 +602,11 @@ pre {
       left: 0;
       height: 100%;
       background-color: #E5CF39; }
-    .post header:hover .selector {
-      opacity: 0.5; }
     .post header:hover h1 {
       color: white;
-      opacity: 1; }
+      opacity: 0.9; }
+  .post.selected header:hover .selector {
+    opacity: 0; }
   .post.expanded section {
     display: block; }
 
