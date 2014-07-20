@@ -36,4 +36,5 @@
     var students = $firebase(ref);
     return students;
   }
+
 })();
