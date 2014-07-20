@@ -151,7 +151,9 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
 
 angular.module("post/postList.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("post/postList.html",
-    "<section class=\"posts\">\n" +
+    "<section scroll-into-view \n" +
+    "         ui-sref-active=\"active\" class=\"triggered\"\n" +
+    "         class=\"posts\">\n" +
     "  <post-item ng-repeat=\"post in postList.posts | orderBy: '-posted'\"\n" +
     "             scroll-into-view \n" +
     "             post=\"post\">\n" +
