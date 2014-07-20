@@ -140,7 +140,7 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
     "\n" +
     "\n" +
     "  <section class=\"meta col-md-2 col-md-offset-1\">\n" +
-    "    <ul class=\"list-links list-links--secondary\">\n" +
+    "    <ul class=\"list-unstyled\">\n" +
     "      <li ng-repeat=\"author in post.authors\">{{author}}</li>\n" +
     "    </ul>\n" +
     "  </section>\n" +
