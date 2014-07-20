@@ -21,7 +21,11 @@
         function selectItem(){
           if(isScrollable()){
             done = false;
-            $rootScope.$broadcast('itemSelected');
+            if(isTriggered){
+              $rootScope.$broadcast('noItemSelected');
+            } else {
+              $rootScope.$broadcast('itemSelected');
+            }
             scrollToPost();
           }
         }

@@ -29,7 +29,6 @@
     $urlRouterProvider.when('', '/posts');
   });
 
-
   app.factory('studentsData', ['$firebase', studentsData]);
 
   function studentsData($firebase){
