@@ -13,12 +13,8 @@
     $stateProvider
       .state('posts', {
         url: '/posts',
-        abstract: true,
         templateUrl: 'post/postList.html',
         controller: 'PostCtrl as postList',
-      })
-      .state('posts.index', {
-        url: ''
       })
       .state('posts.post', {
         url: '/:post_id'
@@ -30,7 +26,7 @@
 
       });
 
-    $urlRouterProvider.when('', '/posts/index');
+    $urlRouterProvider.when('', '/posts');
   });
 
 
