@@ -30,7 +30,7 @@
 
       });
 
-    $urlRouterProvider.when('', '/posts');
+    $urlRouterProvider.when('', '/posts/index');
   });
 
 

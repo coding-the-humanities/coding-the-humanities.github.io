@@ -16,7 +16,7 @@
         $timeout(function(){
           selectItem();
           scope.$watch(selectItem);
-        }, 500);
+        }, 1000);
 
         function selectItem(){
           if(isScrollable()){
