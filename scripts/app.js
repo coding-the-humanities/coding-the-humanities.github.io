@@ -9,11 +9,11 @@
 
   app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.when('', '/posts/index');
 
     $stateProvider
       .state('posts', {
         url: '/posts',
+        abstract: true,
         templateUrl: 'post/postList.html',
         controller: 'PostCtrl as postList',
       })
@@ -29,6 +29,8 @@
         controller: 'PilotCtrl as pilot'
 
       });
+
+    $urlRouterProvider.when('', '/posts');
   });
 
 
