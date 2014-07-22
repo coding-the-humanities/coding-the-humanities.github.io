@@ -4919,7 +4919,8 @@ button.close {
       font-size: 1.2em;
       position: absolute;
       left: 0px;
-      bottom: 20px;
+      bottom: 0.7em;
+      margin: 0;
       width: 100%;
       text-align: left;
       padding: 0.7em 1em;
@@ -4975,16 +4976,19 @@ button.close {
     display: block; }
   @media (min-width: 768px) {
     .post {
-      font-size: 1.1em; } }
-  @media (min-width: 1200px) {
-    .post {
-      font-size: 1.3em; } }
+      font-size: 1.1em; }
+      .post header h1 {
+        bottom: 1em; } }
   @media (min-width: 992px) {
     .post {
-      font-size: 1.2em; } }
+      font-size: 1.2em; }
+      .post header h1 {
+        bottom: 1.5em; } }
   @media (min-width: 1200px) {
     .post {
-      font-size: 1.3em; } }
+      font-size: 1.3em; }
+      .post header h1 {
+        bottom: 2em; } }
 
 section.meta {
   display: none;
@@ -5014,6 +5018,7 @@ section.meta {
 
 .site-header .logo {
   width: 100vw;
+  height: 100vh;
   background-color: #75C7B3; }
   .site-header .logo:hover {
     background-color: #E5CF39; }
