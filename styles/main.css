@@ -4916,16 +4916,22 @@ button.close {
     margin: 0 0 0 0; }
     .post header h1 {
       font-family: NittyBold;
-      font-size: 20px;
+      font-size: 16px;
       position: absolute;
       left: 0px;
       bottom: 20px;
       width: 100%;
       text-align: left;
-      padding: 10px 40px;
+      padding: 10px 16px;
       color: white;
       background-color: black;
       opacity: 0.2; }
+      @media (min-width: 768px) {
+        .post header h1 {
+          font-size: 18px; } }
+      @media (min-width: 992px) {
+        .post header h1 {
+          font-size: 20px; } }
       @media (min-width: 1200px) {
         .post header h1 {
           font-size: 24px; } }
@@ -4948,7 +4954,12 @@ button.close {
   .post.selected header:hover .selector {
     opacity: 0; }
   .post.expanded section {
-    display: block; }
+    display: block;
+    margin-top: 120px; }
+    .post.expanded section h2 {
+      display: none; }
+  .post.expanded h1 {
+    bottom: -100px; }
 
 .meta {
   display: none;
@@ -4996,7 +5007,5 @@ button.close {
 
 .container-fluid {
   width: 100%;
-  height: 100%;
   margin: 0;
-  margin-bottom: 4000px;
   padding: 0; }

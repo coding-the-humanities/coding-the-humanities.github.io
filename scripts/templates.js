@@ -128,13 +128,13 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
     "        <img ng-src=\"{{post.headerImage.url}}\"/>\n" +
     "        <div class=\"selector\"></div>\n" +
     "\n" +
-    "        <h1 class=\"medium\">{{post.title | underscorize}}</h1>\n" +
+    "        <h1>{{post.title | underscorize}}</h1>\n" +
     "\n" +
     "      </a>\n" +
     "    </div>\n" +
     "  </header>\n" +
     "\n" +
-    "  <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-sm-offset-1 csSlideUp\">\n" +
+    "  <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 csSlideUp\">\n" +
     "    <div ng-bind-html=\"post.content | markdown\"></div>\n" +
     "  </section>\n" +
     "\n" +
