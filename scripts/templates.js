@@ -134,12 +134,12 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
     "    </div>\n" +
     "  </header>\n" +
     "\n" +
-    "  <section class=\"text-content col-md-8 col-md-offset-1 csSlideUp\">\n" +
+    "  <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-sm-offset-1 csSlideUp\">\n" +
     "    <div ng-bind-html=\"post.content | markdown\"></div>\n" +
     "  </section>\n" +
     "\n" +
     "\n" +
-    "  <section class=\"meta col-md-2 col-md-offset-1\">\n" +
+    "  <section class=\"meta col-xs-12 col-md-2 col-md-offset-1\">\n" +
     "    <table class=\"table\">\n" +
     "      <thead>\n" +
     "        <th>Meta</th>\n" +
