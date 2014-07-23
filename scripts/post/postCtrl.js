@@ -20,9 +20,6 @@
       filter: 'post',
       active: true
     }, {
-      name: 'Pilot',
-      filter: 'pilot'
-    }, {
       name: 'Articles',
       filter: 'article'
     }, {
