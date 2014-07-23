@@ -9,6 +9,40 @@
     var oldSelectedPost;
     var selectedPost;
 
+    vm.postOrder = '-posted';
+    vm.postFilter = '';
+
+    vm.tags = [{
+      name: 'About',
+      filter: 'about'
+    }, {
+      name: 'Posts', 
+      filter: 'post',
+      active: true
+    }, {
+      name: 'Pilot',
+      filter: 'pilot'
+    }, {
+      name: 'Articles',
+      filter: 'article'
+    }, {
+      name: 'All',
+      filter: ''
+    }];
+
+    vm.setFilter = function(filter){
+      vm.postFilter = filter;
+      _.each(vm.tags, function(tag){
+        tag.active = false;
+        if(tag.filter === filter){
+          tag.active = true;
+        }
+        return tag;
+      });
+      $state.go('posts');
+
+    };
+
     Post.getAll().then(function(posts){
 
       var processedPosts = posts.map(function(post){
