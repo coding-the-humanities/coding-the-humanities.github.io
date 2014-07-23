@@ -157,8 +157,8 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
 angular.module("post/postList.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("post/postList.html",
     "<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n" +
-    "  <div class=\"container\">\n" +
-    "    <div class=\"navbar-header navbar-right\">\n" +
+    "  <div class=\"container-fluid\">\n" +
+    "    <div class=\"navbar-header navbar-left\">\n" +
     "      <ul class=\"nav navbar-nav\">\n" +
     "        <li ng-click=\"postList.setFilter(tag.filter)\" \n" +
     "            ng-repeat=\"tag in postList.tags\" \n" +
