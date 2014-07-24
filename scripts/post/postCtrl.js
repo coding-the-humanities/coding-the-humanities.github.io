@@ -1,5 +1,16 @@
 (function(){
   'use strict';
+  angular.module('cth').controller('AppCtrl', [AppCtrl]);
+
+  function AppCtrl(){
+    var vm = this;
+    vm.navbarOpen = false;
+    vm.toggleNavDrawer = function(){
+      console.log("hello");
+      vm.navbarOpen = !vm.navbarOpen;
+    };
+    return vm;
+  }
 
   angular.module('cth').controller('PostCtrl', ['Post', '$scope', '$state', '$rootScope', '_', PostCtrl]);
 

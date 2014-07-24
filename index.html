@@ -31,12 +31,6 @@
   </head>
   <body class="container-fluid" ng-cloak ng-app="cth">
 
-    <header class="site-header">
-      <a href ui-sref="posts"> 
-        <div class="logo" ng-include="'common/templates/logo.html'"></div>
-      </a>
-    </header>
-
     <!-- <header class="app&#45;bar promote&#45;layer"> -->
     <!--   <button class="menu"> -->
     <!--     <img src="images/hamburger.svg" alt="Menu"> -->
@@ -52,7 +46,7 @@
     <!--   </ul> -->
     <!-- </nav> -->
     <!-- Fixed navbar -->
-    <main>
+    <main ng-controller="AppCtrl as app">
 
       <div ui-view autoscroll="false"></div>
     </main>
