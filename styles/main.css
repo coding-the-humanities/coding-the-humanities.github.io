@@ -5049,6 +5049,7 @@ section.meta {
     border: none; }
   .navdrawer .toggleNavDrawer {
     position: fixed;
+    display: block;
     left: 0;
     top: 0px;
     width: 60px;
