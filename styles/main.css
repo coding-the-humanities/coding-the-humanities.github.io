@@ -5044,7 +5044,8 @@ section.meta {
   width: 250px;
   height: 100%;
   background-color: black;
-  color: white; }
+  color: white;
+  overflow-y: auto; }
   .navdrawer .list-group, .navdrawer .list-group-item {
     border: none; }
   .navdrawer .toggleNavDrawer {
