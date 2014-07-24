@@ -2,7 +2,7 @@ angular.module('templates-cth', ['common/templates/logo-blank.html', 'common/tem
 
 angular.module("common/templates/logo-blank.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("common/templates/logo-blank.html",
-    "<svg class=\"logo-blank\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 424 244\" enable-background=\"new 0 0 424 244\" xml:space=\"preserve\">\n" +
+    "<svg id=\"logo-blank\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 424 244\" enable-background=\"new 0 0 424 244\" xml:space=\"preserve\">\n" +
     "  <g></g>\n" +
     "  <rect x=\"18\" y=\"18\" width=\"282\" height=\"65\" class=\"style0\"/>\n" +
     "  <rect x=\"18\" y=\"90\" width=\"174\" height=\"65\" class=\"style0\"/>\n" +
@@ -183,9 +183,7 @@ angular.module("post/postList.html", []).run(["$templateCache", function($templa
     "<!-- </div> -->\n" +
     "\n" +
     "<nav ng-class=\"{open:app.navbarOpen}\" class=\"navdrawer\"}}>\n" +
-    "  <button ng-click=\"app.toggleNavDrawer()\" class=\"toggleNavDrawer\">\n" +
-    "    <div class=\"logo\" ng-include=\"'common/templates/logo-blank.html'\"></div>\n" +
-    "  </button>\n" +
+    "  <div ng-click=\"app.toggleNavDrawer()\" class=\"toggleNavDrawer logo\" ng-include=\"'common/templates/logo-blank.html'\"></div>\n" +
     "  <ul class=\"list-group\">\n" +
     "    <li ng-click=\"postList.setFilter(tag.filter)\" \n" +
     "        ng-repeat=\"tag in postList.tags\" \n" +

@@ -3890,12 +3890,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   background-color: black;
   border: 1px solid none; }
   .list-group-item:first-child {
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px; }
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; }
   .list-group-item:last-child {
     margin-bottom: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px; }
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
   .list-group-item > .badge {
     float: right; }
   .list-group-item > .badge + .badge {
@@ -5044,27 +5044,27 @@ section.meta {
   width: 250px;
   height: 100%;
   background-color: black;
-  color: white;
-  overflow-y: auto; }
+  color: white; }
   .navdrawer .list-group, .navdrawer .list-group-item {
     border: none; }
-  .navdrawer button {
+  .navdrawer .toggleNavDrawer {
     position: fixed;
     left: 0;
     top: 0px;
+    width: 60px;
+    padding: 8px;
     background-color: black;
     border: 0px solid #666;
     color: white;
-    opacity: 0.6;
-    text-decoration: none; }
-    .navdrawer button .logo {
-      z-index: 99999;
-      width: 46px;
-      padding: 9px 5px; }
-      .navdrawer button .logo svg {
-        fill: white; }
+    text-decoration: none;
+    z-index: 2;
+    opacity: 0.2; }
+    .navdrawer .toggleNavDrawer svg {
+      fill: white; }
+    .navdrawer .toggleNavDrawer:hover {
+      opacity: 1; }
   .navdrawer.open {
     left: 0px; }
-    .navdrawer.open button {
+    .navdrawer.open .toggleNavDrawer {
       left: 250px;
       opacity: 1; }
