@@ -5066,5 +5066,4 @@ section.meta {
   .navdrawer.open {
     left: 0px; }
     .navdrawer.open .toggleNavDrawer {
-      left: 250px;
-      opacity: 0.2; }
+      left: 250px; }
