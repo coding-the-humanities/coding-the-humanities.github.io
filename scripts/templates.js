@@ -168,25 +168,11 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
 
 angular.module("post/postList.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("post/postList.html",
-    "<!-- <div class=\"navbar navbar&#45;inverse navbar&#45;fixed&#45;top\" role=\"navigation\"> -->\n" +
-    "<!--   <div class=\"container&#45;fluid\"> -->\n" +
-    "<!--     <div class=\"navbar&#45;header navbar&#45;left\"> -->\n" +
-    "<!--       <ul class=\"nav navbar&#45;nav\"> -->\n" +
-    "<!--         <li ng&#45;click=\"postList.setFilter(tag.filter)\"  -->\n" +
-    "<!--             ng&#45;repeat=\"tag in postList.tags\"  -->\n" +
-    "<!--             ng&#45;class=\"{active: tag.active}\"> -->\n" +
-    "<!--             <a>{{tag.name}}</a> -->\n" +
-    "<!--         </li> -->\n" +
-    "<!--       </ul> -->\n" +
-    "<!--     </div> -->\n" +
-    "<!--   </div> -->\n" +
-    "<!-- </div> -->\n" +
-    "\n" +
     "<nav ng-class=\"{open:app.navbarOpen}\" class=\"navdrawer\"}}>\n" +
     "  <div ng-click=\"app.toggleNavDrawer()\" class=\"toggleNavDrawer logo\" ng-include=\"'common/templates/logo-blank.html'\"></div>\n" +
     "  <ul class=\"list-group\">\n" +
-    "    <li ng-click=\"postList.setFilter(tag.filter)\" \n" +
-    "        ng-repeat=\"tag in postList.tags\" \n" +
+    "    <li ng-click=\"app.setFilter(tag.filter)\" \n" +
+    "        ng-repeat=\"tag in app.tags\" \n" +
     "        ng-class=\"{active: tag.active}\"\n" +
     "        class=\"list-group-item\">{{tag.name}}</li>\n" +
     "  </ul>\n" +
@@ -207,7 +193,7 @@ angular.module("post/postList.html", []).run(["$templateCache", function($templa
     "  <section scroll-into-view \n" +
     "           ui-sref-active=\"active\" class=\"triggered\"\n" +
     "           class=\"posts\">\n" +
-    "           <post-item ng-repeat=\"post in postList.posts | filter:{ tags: postList.postFilter }| orderBy:postList.postOrder\"\n" +
+    "           <post-item ng-repeat=\"post in postList.posts | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
     "               scroll-into-view \n" +
     "               post=\"post\">\n" +
     "    </post-item>\n" +
