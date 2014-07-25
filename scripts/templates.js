@@ -168,37 +168,21 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
 
 angular.module("post/postList.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("post/postList.html",
+    "<div class=\"navbar navbar-inverse navbar-static-top\" role=\"navigation\">\n" +
+    "  <div class=\"container-fluid\">\n" +
+    "      <ul class=\"nav navbar-nav\">\n" +
+    "        <li ng-click=\"app.setFilter(tag.filter)\" \n" +
+    "            ng-repeat=\"tag in app.tags\" \n" +
+    "            ng-class=\"{active: tag.active}\">\n" +
+    "            <a>{{tag.name}}</a>\n" +
+    "        </li>\n" +
+    "      </ul>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "\n" +
     "<section scroll-into-view \n" +
     "         ui-sref-active=\"active\" class=\"triggered\"\n" +
     "         class=\"posts\">\n" +
-    "\n" +
-    "  <div class=\"navbar navbar-inverse navbar-static-top\" role=\"navigation\">\n" +
-    "    <div class=\"container-fluid\">\n" +
-    "\n" +
-    "      <div class=\"navbar-header\">\n" +
-    "        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n" +
-    "          <span class=\"sr-only\">Toggle navigation</span>\n" +
-    "          <span class=\"icon-bar\"></span>\n" +
-    "          <span class=\"icon-bar\"></span>\n" +
-    "          <span class=\"icon-bar\"></span>\n" +
-    "        </button>\n" +
-    "        <a class=\"navbar-brand\" href=\"#\"><div ng-include=\"'common/templates/logo-blank.html'\"></div></a>\n" +
-    "        </button>\n" +
-    "      </div>\n" +
-    "\n" +
-    "      <div class=\"navbar-collapse collapse\">\n" +
-    "        <ul class=\"nav navbar-nav\">\n" +
-    "          <li ng-click=\"app.setFilter(tag.filter)\" \n" +
-    "              ng-repeat=\"tag in app.tags\" \n" +
-    "              ng-class=\"{active: tag.active}\">\n" +
-    "              <a>{{tag.name}}</a>\n" +
-    "          </li>\n" +
-    "        </ul>\n" +
-    "      </div>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "\n" +
-    "\n" +
     "  <post-item ng-repeat=\"post in postList.posts | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
     "       scroll-into-view \n" +
     "             post=\"post\">\n" +
