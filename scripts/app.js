@@ -7,7 +7,7 @@
   app.constant('$', jQuery);
   app.constant('_', _);
 
-  app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
+  app.config(function($stateProvider, $urlRouterProvider) {
 
 
     $stateProvider
