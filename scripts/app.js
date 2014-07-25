@@ -26,8 +26,6 @@
 
       });
 
-    $locationProvider.html5Mode(true);
-
     $urlRouterProvider.when('', '/posts');
   });
 
