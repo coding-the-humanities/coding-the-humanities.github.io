@@ -7,7 +7,7 @@
   app.constant('$', jQuery);
   app.constant('_', _);
 
-  app.config(function($stateProvider, $urlRouterProvider) {
+  app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
 
 
     $stateProvider
@@ -25,6 +25,8 @@
         controller: 'PilotCtrl as pilot'
 
       });
+
+    $locationProvider.html5Mode(true);
 
     $urlRouterProvider.when('', '/posts');
   });
